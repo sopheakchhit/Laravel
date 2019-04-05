@@ -1,0 +1,16 @@
+@foreach($product as $product) 
+       <div class="col-md-3">
+         <div style="margin:7px;" class="well">
+           <figure>
+             <img src="{{asset($product->image)}}" width="170" height="145">
+           </figure>
+           <p>{{$product->description}}</p>
+           <p>$. {{$product->price}}</p>
+           
+           <a href="{{url('view',$product->id)}}">
+             <button type="submit" class="btn btn-success">View</button>
+           </a>
+                   
+        </div>
+      </div>
+    @endforeach
